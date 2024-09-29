@@ -1,7 +1,7 @@
 module.exports = {
 	config: {
 		name: "grouptag",
-		aliases: ["grtag"],
+		aliases: ["tag"],
 		version: "1.5",
 		author: "NTKhang",
 		countDown: 5,

@@ -18,7 +18,7 @@ module.exports = {
 		try {
 			const ownerInfo = {
 				name: 'ArYan🐔',
-				botname: '𝗉𝖾𝗄𝗈 𝖠𝖨🐔'
+				botname: '𝗉𝖾𝗄𝗈 𝖠𝖨🐔',
 				gender: 'Male',
 				subject: 'English',
 				Relationship: 'single',

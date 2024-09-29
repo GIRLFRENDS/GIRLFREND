@@ -20,7 +20,7 @@ module.exports = {
 			footer: "\n- User ID: %1\n- Nhóm: %2\n- ID nhóm: %3\n- Thời gian: %4"
 		},
 		en: {
-			title: "🌐Notification admin🌐\n\n",
+			title: "۞𝖭𝗈𝗍𝗂𝖿𝗂𝖼𝖺𝗍𝗂𝗈𝗇 𝗍𝗁𝖾 𝖻𝗈𝗍۞\n\n",
 			footer: "\n• Group Name: %2",
 			added: "♻️ Bot has been added to a new group ♻️\n• Added by: %1",
 			kicked: "📛 Bot has been kicked to the group 📛\n• Kicked by: %1"

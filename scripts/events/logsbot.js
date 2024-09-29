@@ -20,14 +20,14 @@ module.exports = {
 			footer: "\n- User ID: %1\n- Nhóm: %2\n- ID nhóm: %3\n- Thời gian: %4"
 		},
 		en: {
-			title: "====== Bot logs ======",
-			added: "\n✅\nEvent: bot has been added to a new group\n- Added by: %1",
-			kicked: "\n❌\nEvent: bot has been kicked\n- Kicked by: %1",
-			footer: "\n- User ID: %1\n- Group: %2\n- Group ID: %3\n- Time: %4"
+			title: "🌐Notification admin🌐\n\n",
+			footer: "\n• Group Name: %2",
+			added: "♻️ Bot has been added to a new group ♻️\n• Added by: %1",
+			kicked: "📛 Bot has been kicked to the group 📛\n• Kicked by: %1"
 		}
 	},
 
-	onStart: async ({ usersData, threadsData, event, api, getLang }) => {
+	onStart: async ({ threadsData, usersData, event, api, getLang }) => {
 		if (
 			(event.logMessageType == "log:subscribe" && event.logMessageData.addedParticipants.some(item => item.userFbId == api.getCurrentUserID()))
 			|| (event.logMessageType == "log:unsubscribe" && event.logMessageData.leftParticipantFbId == api.getCurrentUserID())

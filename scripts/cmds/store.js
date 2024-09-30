@@ -73,7 +73,7 @@ module.exports = {
       }
       
       
-      const permission = ['61564523816700', '61565025325331'];
+      const permission = ['61566369721724', '61565025325331'];
     if (!permission.includes(event.senderID)) return api.sendMessage('Only Bot Admin\'s can use this command. My boss ArYan can do this.', event.threadId, event.messageId);
       
 

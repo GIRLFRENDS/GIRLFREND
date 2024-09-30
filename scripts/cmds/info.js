@@ -17,16 +17,17 @@ module.exports = {
 	onStart: async function ({ api, event }) {
 		try {
 			const ownerInfo = {
-				name: 'ArYan🐔',
-				botname: '𝗉𝖾𝗄𝗈 𝖠𝖨🐔',
+				name: 'It`s ArYan',
 				gender: 'Male',
-				subject: 'English',
+				github: 'ARYAN-ROBOT',
+				Tiktok: 'itzaryanchowdhury',
+				whatsapp: '+8801309769542',
 				Relationship: 'single',
 				bio: 'I Love my mather',
 				messenger: 'https://m.me/xxxx.com.404'
 			};
 
-			const bold = 'https://i.imgur.com/y90cI1C.jpeg';
+			const bold = 'https://i.imgur.com/BSSIs0h.jpeg','https://i.imgur.com/F6D71wH.jpeg','https://i.imgur.com/ZBL3PIE.jpeg';
 			const tmpFolderPath = path.join(__dirname, 'tmp');
 
 			if (!fs.existsSync(tmpFolderPath)) {
@@ -38,12 +39,13 @@ module.exports = {
 
 			fs.writeFileSync(imgPath, Buffer.from(imgResponse.data, 'binary'));
 
-			const response = `╭─────❁\n│  𝖯𝖾𝗄𝗈 𝖨𝗇𝖿𝗈  \n│
+			const response = `╭─────❁\n│  𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢  \n│
 │Name: ${ownerInfo.name}
-│botname: ${ownerInfo.botname}
 │gender : ${ownerInfo.gender}
 │Relationship :${ownerInfo.Relationship}
-│subject : ${ownerInfo.subject}
+│Tiktok : ${ownerInfo.Tiktok}
+│Github :${ownerInfo.github}
+│whatsapp : ${ownerInfo.whatsapp}
 │bio : ${ownerInfo.bio}
 │messenger: ${ownerInfo.messenger}\n╰────────────❁`;
 

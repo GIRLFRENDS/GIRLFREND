@@ -1,68 +1,110 @@
-const { GoatWrapper } = require('fca-liane-utils');
-const axios = require('axios');
 const fs = require('fs');
-const path = require('path');
+const moment = require('moment-timezone');
+const NepaliDate = require('nepali-date');
+const fast = require('fast-speedtest-api');
 
 module.exports = {
-	config: {
-		name: "info",
-		author: "ArYan",
-		role: 0,
-		shortDescription: "info and my owner the cmd",
-		longDescription: "",
-		category: "admin",
-		guide: "{pn}"
-	},
+  config: {
+    name: "info",
+    aliases: ['info', 'owner'],
+    version: "1.3",
+    author: "AceGun",
+    countDown: 5,
+    role: 0,
+    shortDescription: {
+      vi: "",
+      en: "Sends information about the bot and admin along with an image."
+    },
+    longDescription: {
+      vi: "",
+      en: "Sends information about the bot and admin along with an image."
+    },
+    category: "utility",
+    guide: {
+      en: "{pn}"
+    },
+    envConfig: {}
+  },
 
-	onStart: async function ({ api, event }) {
-		try {
-			const ownerInfo = {
-				name: 'It`s ArYan',
-				gender: 'Male',
-				github: 'ARYAN-ROBOT',
-				Tiktok: 'itzaryanchowdhury',
-				whatsapp: '+8801309769542',
-				Relationship: 'single',
-				bio: 'I Love my mather',
-				messenger: 'https://m.me/xxxx.com.404'
-			};
+  onStart: async function ({ message, api, event, usersData, threadsData }) {
+    const allUsers = await usersData.getAll();
+    const allThreads = await threadsData.getAll();
+    const speedTest = new fast({
+        token: "YXNkZmFzZGxmbnNkYWZoYXNkZmhrYWxm",
+        verbose: false,
+        timeout: 10000,
+        https: true,
+        urlCount: 5,
+        bufferSize: 8,
+        unit: fast.UNITS.Mbps
+      });
+    const result = await speedTest.getSpeed();
+    const botName = global.GoatBot.config.nickNameBot;
+    const botPrefix = global.GoatBot.config.prefix;
+    const authorName = global.GoatBot.config.authorName;
+    const authorFB = global.GoatBot.config.authorFB;
+    const authorSubject = "English";
+    const authorYahoo = "itszaryan@yahoo.com";
+    const authorGithub = "https://github.com/ARYAN-BOT-404";
+    const status = "Single";
+    const timeStart = Date.now();
 
-			const bold = 'https://i.imgur.com/BSSIs0h.jpeg','https://i.imgur.com/F6D71wH.jpeg','https://i.imgur.com/ZBL3PIE.jpeg';
-			const tmpFolderPath = path.join(__dirname, 'tmp');
+    const urls = JSON.parse(fs.readFileSync('scripts/cmds/aryan/info.json'));
+    const link = urls[Math.floor(Math.random() * urls.length)];
 
-			if (!fs.existsSync(tmpFolderPath)) {
-				fs.mkdirSync(tmpFolderPath);
-			}
+    // Get current date and time in Asia/Kathmandu timezone
+    const now = moment().tz('Asia/Dhaka');
+    const date = now.format('MMMM Do YYYY');
+    const time = now.format('h:mm:ss A');
 
-			const imgResponse = await axios.get(bold, { responseType: 'arraybuffer' });
-			const imgPath = path.join(tmpFolderPath, 'owner_img.jpeg');
+    // Calculate bot uptime
+    const uptime = process.uptime();
+    const uptimeString = formatUptime(uptime);
 
-			fs.writeFileSync(imgPath, Buffer.from(imgResponse.data, 'binary'));
+    const ping = Date.now() - timeStart;
 
-			const response = `╭─────❁\n│  𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢  \n│
-│Name: ${ownerInfo.name}
-│gender : ${ownerInfo.gender}
-│Relationship :${ownerInfo.Relationship}
-│Tiktok : ${ownerInfo.Tiktok}
-│Github :${ownerInfo.github}
-│whatsapp : ${ownerInfo.whatsapp}
-│bio : ${ownerInfo.bio}
-│messenger: ${ownerInfo.messenger}\n╰────────────❁`;
+    const replyMessage = `===「 Bot & Owner Info 」===
+❏ Bot Name: ${botName}
+❏ Bot Prefix: ${botPrefix}
+❏ Author Name: ${authorName}
+❏ FB: ${authorFB}
+❏ Subject: ${authorSubject}
+❏ Author Yahoo: ${authorYahoo}
+❏ Author Github: ${authorGithub}
+❏ Status: ${status}
+❏ Date: ${date}
+❏ Total Threads: ${allThreads.length}
+❏ Total Users: ${allUsers.length}
+❏ Time: ${time}
+❏ Bot Running: ${uptimeString}
+❏ Bot's Speed: ${result} MBPS
+=====================`;
 
-			await api.sendMessage({
-				body: response,
-				attachment: fs.createReadStream(imgPath)
-			}, event.threadID, event.messageID);
+    const attachment = await global.utils.getStreamFromURL(link);
+    message.reply({
+      body: replyMessage,
+      attachment
+    });
+  },
 
-			fs.unlinkSync(imgPath);
-
-			api.setMessageReaction('🐔', event.messageID, (err) => {}, true);
-		} catch (error) {
-			console.error('Error in ownerinfo command:', error);
-			return api.sendMessage('An error occurred while processing the command.', event.threadID);
-		}
-	}
+  onChat: async function({ event, message, getLang }) {
+    if (event.body && event.body.toLowerCase() === "info") {
+      await this.onStart({ message });
+    }
+  }
 };
 
-const wrapper = new GoatWrapper(module.exports);
-wrapper.applyNoPrefix({ allowPrefix: true });
+function formatUptime(uptime) {
+  const seconds = Math.floor(uptime % 60);
+  const minutes = Math.floor((uptime / 60) % 60);
+  const hours = Math.floor((uptime / (60 * 60)) % 24);
+  const days = Math.floor(uptime / (60 * 60 * 24));
+
+  const uptimeString = [];
+  if (days > 0) uptimeString.push(`${days}d`);
+  if (hours > 0) uptimeString.push(`${hours}h`);
+  if (minutes > 0) uptimeString.push(`${minutes}min`);
+  if (seconds > 0) uptimeString.push(`${seconds}sec`);
+
+  return uptimeString.join(" ");
+}

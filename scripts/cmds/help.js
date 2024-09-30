@@ -60,7 +60,7 @@ module.exports = {
       });
 
       const totalCommands = commands.size;
-      msg += `\n  ├─────☾⋆\n	│» Total cmds: [${totalCommands}]\n  │「 𝖯𝖾𝗄𝗈 𝖺𝗅𝗅 𝖼𝗆𝖽𝗌 」\n  ╰──────────⧕`;
+      msg += `\n  ├─────☾⋆\n │» Total cmds: [${totalCommands}]\n  │「 ArYAN ALL CMDS 」\n  ╰──────────⧕`;
 
  				const helpListImages = [ "https://i.imgur.com/BSSIs0h.jpeg","https://i.imgur.com/F6D71wH.jpeg","https://i.imgur.com/ZBL3PIE.jpeg"];
 

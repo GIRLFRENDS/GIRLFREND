@@ -5,7 +5,7 @@ const path = require("path");
 
 module.exports = {
   config: {
-    name: "pin", 
+    name: "pin2", 
     aliases: ["pinterest"], 
     version: "1.0.2", 
     author: "KSHITIZ", 

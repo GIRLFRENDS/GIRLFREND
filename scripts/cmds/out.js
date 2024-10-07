@@ -7,7 +7,7 @@ module.exports = {
 		name: "Out",
 		aliases: ["l"],
 		version: "1.0",
-		author: "ArYan",
+		author: "ʀʌʜʌt",
 		countDown: 5,
 		role: 2,
 		shortDescription: "bot will leave gc",
@@ -26,7 +26,7 @@ module.exports = {
  } else {
  id = parseInt(args.join(" "));
  }
- return api.sendMessage('▣𝗉𝖾𝗄𝗈 𝖻𝗈𝗍 𝗅𝖾𝖺𝗏𝖾:\n》Mon succès est inévitable, car je suis destiné à être au sommet.\n\n➤𝖻𝗒𝖾 𝖺𝗅𝗅 𝖿𝗋𝖾𝗇𝖽𝗌', id, () => api.removeUserFromGroup(api.getCurrentUserID(), id))
+ return api.sendMessage('ʀʌʜʌt ɓot ɭɘʌvɘ', id, () => api.removeUserFromGroup(api.getCurrentUserID(), id))
 		}
 	}
 

@@ -44,8 +44,8 @@ module.exports = {
     const authorName = global.GoatBot.config.authorName;
     const authorFB = global.GoatBot.config.authorFB;
     const authorSubject = "English";
-    const authorYahoo = "itszaryan@yahoo.com";
-    const authorGithub = "https://github.com/ARYAN-BOT-404";
+    const authorYahoo = "rahatvai@gmail.com";
+    const authorGithub = "Unknown";
     const status = "Single";
     const timeStart = Date.now();
 

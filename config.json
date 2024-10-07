@@ -35,34 +35,28 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "61566915171925",
-    "61565025325331",
-    "27089802743938316",
-    "",
-    "61566369721724"
+    "61566452145973"
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [
-      "100076969407340",
-      "61565654826940",
-      "61566369721724"
+      ""
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "𝖯𝖾𝗄𝗈",
+  "nickNameBot": "ʀʌʜʌt & tʌʀɩʆ",
   "prefix": ".",
   "xnil": "https://xnil-apis.onrender.com/",
   "api": "https://www.noobs-api.000.pe",
   "api2": "https://www.noobs-api.000.pe/dipto",
   "a6y": "https://a6-video-api-t0il.onrender.com/Romim",
   "api3": "https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json",
-  "authorName": "ArYan",
-  "facebook2": "https://www.facebook.com/raj.vai.404",
-  "facebook": "https://www.facebook.com/ArYan.com.404",
-  "email": "davidaryan397@gmail.com",
-  "replit": "https://replit.com/@DAVID-RAJ",
-  "github": "https://github.com/DAVID-ARYAN-RAJ/ARYAN-RAJ",
+  "authorName": "ʀʌʜʌt",
+  "facebook2": "https://www.facebook.com/profile.php?id=61566452145973",
+  "facebook": "https://www.facebook.com/profile.php?id=61566452145973",
+  "email": "rahatvai@gmail.com",
+  "replit": "",
+  "github": "",
   "insta": "no",
   "age": "18+",
   "TG": "nei",
@@ -178,8 +172,8 @@
   "whiteListModeThread": {
     "enable": false,
     "whiteListThreadIds": [
-      "8793795193966076",
-      "27089802743938316"
+      "",
+      ""
     ],
     "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
     "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"

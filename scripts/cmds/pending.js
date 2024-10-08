@@ -27,7 +27,7 @@ module.exports = {
         if (isNaN(singleIndex) || singleIndex <= 0 || singleIndex > pending.length)
           return api.sendMessage(`[ ERR ] ${singleIndex} Not a valid number`, threadID, messageID);
       }
-      return api.sendMessage(`𝗧𝗵𝗶𝘀 𝗯𝗼𝘅 𝗽𝗿𝗲𝗺𝗶𝘀𝘀𝗶𝗼𝗻 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹 💋\n\n𝗠𝗬 𝗔𝗥𝗬𝗔𝗡 𝗕𝗢𝗦𝗦 𝗙𝗯 𝗶𝗱: \nhttps://www.facebook.com/xxxx.com.404\n\n•𝗕𝗼𝘁 𝗵𝗲𝗹𝗽 𝘀𝗲𝗲 𝘆𝗼𝘂 𝗮𝗹𝗹 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n•𝗛𝗮𝘃𝗲 𝗮 𝗻𝗶𝗰𝗲 𝗺𝗼𝗿𝗻𝗶𝗻𝗴 💋`, threadID, messageID);
+      return api.sendMessage(`successfull parmition MY BOSS RAHAT 🌼🌼🌼 FB link : https://www.facebook.com/profile.php?id=61566452145973`, threadID, messageID);
     } else {
       const index = body.split(/\s+/);
       for (const singleIndex of index) {
@@ -76,13 +76,13 @@ module.exports = {
         }
       }, 5000);
 
-      return api.sendMessage(`╭─────❁\n│𝗔𝗥𝗬𝗔𝗡\n╰────────────❁ \n[ OK ] Successfully approved ${count} thread(s)!`, threadID, messageID);
+      return api.sendMessage(`[ OK ] Successfully approved ${count} thread(s)!`, threadID, messageID);
     }
   },
 
   onStart: async function ({ message, api, event, args, usersData }) {
     if (args.join() === "") {
-      return api.sendMessage("╭─────❁\n│𝗔𝗥𝗬𝗔𝗡\n╰────────────❁ \n❯ You can use pending:\n❯ Pending user: User queue\n❯ Pending thread: Group queue\n❯ Pending all: All boxes are waiting for approval", event.threadID, event.messageID);
+      return api.sendMessage("❯ You can use pending:\n❯ Pending user: User queue\n❯ Pending thread: Group queue\n❯ Pending all: All boxes are waiting for approval", event.threadID, event.messageID);
     }
 
     const content = args.slice(1, args.length);

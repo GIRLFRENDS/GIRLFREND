@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports.config = {
-    name: "flux3",
+    name: "fflux",
     description: "Generate image from fal ai flux pro",
     cooldown: 5,
     aliases: [],

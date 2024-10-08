@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete ="「 🦋🖤 RAHAT HOSSAIN 🖤🦋 」";
+const doNotDelete ="「 𝚖𝚒𝚝𝚍𝚎𝚟𝚜 𝚜𝚞𝚙𝚙𝚘𝚛𝚝𝚎𝚍 𝚋𝚢 𝚜𝚊𝚖𝚒𝚛 」";
 /** 
 * @author NTKhang
 * @author: do not delete it
@@ -40,110 +40,194 @@ module.exports = {
 		en: {			help: 
       `
 ╭───✰《 𝗔𝗜 》
-│❍ai ❍gpt 
-│❍forever ❍pikachu 
-│❍isha ❍ai2
-|❍imagine ❍x
-|❍bard
+│❍ai
+│❍gpt
+│❍forever
+│❍pikachu
+│❍isha
+│❍ai2
+│❍imagine
+│❍x
+│❍bard
 ╰───────────○
 ╭───✰《 𝗔𝗡𝗜𝗠𝗘 》
-│✿anime ✿waifu ✿animevideo
-│✿aniboy ✿anigirl ✿aniblur
-│✿animeinfo ✿animerelease
-│✿malnews ✿animequote 
+│✿anime
+│✿waifu
+│✿animevideo
+│✿aniboy
+│✿anigirl
+│✿aniblur
+│✿animeinfo
+│✿animerelease
+│✿malnews
+│✿animequote 
 │✿animescrape
 ╰───────────○
 ╭───✰《 𝗚𝗥𝗢𝗨𝗣 》
-│◎filteruser ◎all 
-│◎kick ◎badwords 
-│◎warn ◎tid
-│◎busy ◎count 
-│◎unsend ◎uid 
-│◎setrole ◎setname
-│◎adduser ◎antiout
-│◎onlyadminbox ◎rules
-│◎group ◎box
+│◎filteruser
+│◎all 
+│◎kick
+│◎badwords 
+│◎warn
+│◎tid
+│◎busy
+│◎count 
+│◎unsend
+│◎uid 
+│◎setrole
+│◎setname
+│◎adduser
+│◎antiout
+│◎onlyadminbox
+│◎rules
+│◎group
+│◎box
 ╰───────────○
 ╭───✰《 𝗢𝗪𝗡𝗘𝗥 》
-│⚘setrole ⚘admin
-│⚘user ⚘approve 
-│⚘cmd ⚘event
+│⚘setrole
+│⚘admin
+│⚘user
+│⚘approve 
+│⚘cmd
+│⚘event
 ╰───────────○
 ╭───✰《 𝗜𝗠𝗔𝗚𝗘 》
-│✧avatar ✧avatar2 
-│✧avatar3 ✧avatar4 
-│✧gfx✧gfx2✧gfx3
-│✧gfx4✧gfx5✧gfx6
-│✧cover✧cover2✧cover3
-│✧cover4 ✧blink ✧blink2
-│✧clown ✧bed ✧sadcat
-│✧fbcover ✧fbcover2 
-│✧fbcover3 ✧moonwall
-│✧mpanel ✧meme
+│✧avatar
+│✧avatar2 
+│✧avatar3
+│✧avatar4 
+│✧gf
+│✧gfx
+│✧gfx3
+│✧gfx4
+│✧gfx5
+│✧gfx6
+│✧cover
+│✧cover2
+│✧cover3
+│✧cover4
+│✧blink
+│✧blink2
+│✧clown
+│✧bed
+│✧sadcat
+│✧fbcover
+│✧fbcover2 
+│✧fbcover3
+│✧moonwall
+│✧mpanel
+│✧meme
 ╰───────────○
 ╭───✰《 𝗙𝗨𝗡 》
-│✾emojimix ✾gay
-│✾say ✾jail ✾slap
-│✾buttslap ✾fak
-│✾delate ✾install
-│✾phub ✾spiderman
-│✾pet ✾avoid
-│✾hug ✾kiss
-│✾pair ✾cdp2
-│✾age ✾trash
- |✾meme
+│✾emojimix
+│✾gay
+│✾say
+│✾jail
+│✾slap
+│✾buttslap
+│✾fak
+│✾delate
+│✾install
+│✾phub
+│✾spiderman
+│✾pet
+│✾avoid
+│✾hug
+│✾kiss
+│✾pair
+│✾cdp2
+│✾age
+│✾trash
+│✾meme
 ╰───────────○
 ╭───✰《 𝗕𝗔𝗡𝗞 》
-│❖Bank ❖rob
+│❖Bank
+│❖rob
 ╰───────────○
 ╭───✰《 𝗠𝗘𝗗𝗜𝗔 》
-│▷fbvideo ▷insta 
-│▷sing ▷ytb
-│▷video▷music 
-│▷play▷lyrics
-│▷video2 ▷song
-│▷spdl ▷vps
+│▷fbvideo
+│▷insta 
+│▷sing
+│▷ytb
+│▷video
+│▷music
+│▷play
+│▷lyrics
+│▷video2
+│▷song
+│▷spdl
+│▷vps
 ╰───────────○
 ╭───✰《 𝗥𝗔𝗡𝗞 》
-│✘rank ✘rankup  
+│✘rank
+│✘rankup  
 │✘customrankcard  
 ╰───────────○
 ╭───✰《 𝗦𝗬𝗦𝗧𝗘𝗠 》
-│⏣say ⏣translate 
-│⏣info ⏣weather 
-│⏣help  ⏣ocr
-│⏣supportgc ⏣uptime 
-│⏣ping ⏣pastebin 
-│⏣rbg ⏣out
-│⏣outall ⏣set
-│⏣git ⏣tikinfo
-│⏣chrome ⏣tiksr
+│⏣say
+│⏣translate 
+│⏣info
+│⏣weather 
+│⏣help
+│⏣ocr
+│⏣supportgc
+│⏣uptime 
+│⏣ping
+│⏣pastebin 
+│⏣rbg
+│⏣out
+│⏣outall
+│⏣set
+│⏣git
+│⏣tikinfo
+│⏣chrome
+│⏣tiksr
 ╰───────────○ 
 ╭───✰《 𝗪𝗜𝗞𝗜 》
-│☻emojimean ☻wiki
-│☻emojimix ☻exersiseinfo
-│☻imbb ☻Pinterest
-│☻gg ☻gg3☻img
+│☻emojimean
+│☻wiki
+│☻emojimix
+│☻exersiseinfo
+│☻imbb
+│☻Pinterest
+│☻gg
+│☻gg3
+│☻img
 ╰───────────○
 ╭───✰《 𝕥𝕖𝕩𝕥 𝕡𝕣𝕠 》
-│:⁠logo :bigtxt
+│🪄logo
+│🪄bigtxt
 ╰───────────○
 ╭───✰《 𝗪𝗥𝗜𝗧𝗘 》
-│✎zuck ✎post ✎biden
-│✎kabby ✎elon ✎r
-│✎post ✎ntkhang
-│✎trump ✎smith 
+│✎zuck
+│✎post
+│✎biden
+│✎kabby
+│✎elon
+│✎r
+│✎post
+│✎ntkhang
+│✎trump
+│✎smith 
 │✎blackpanther 
 ╰───────────○
 ╭───✰《 𝗚𝗔𝗠𝗘 》
-│๛bal ๛guessnumber
-│๛quiz ๛slot 
-│๛dice ๛flag ๛pokemon
-│๛ttt ๛ttt2
+│๛bal
+│๛guessnumber
+│๛quiz
+│๛slot 
+│๛dice
+│๛flag
+│๛pokemon
+│๛ttt
+│๛ttt2
 │๛pubgguess 
 ╰───────────○
 ╭───✰《 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 》
 │ Type %5ishasupport
+╰───────────○
+╭───✰《 hëlp lïst 》
+│ 🪄 ʀʌʜʌt ɓot 🖤
 ╰───────────○
 \n ☞ Total cmds: [ %4 ].\n ☞ Type: [%5help <cmd> ]\n ☞ To see how to use it.
    `,

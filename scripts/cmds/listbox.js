@@ -32,7 +32,7 @@ module.exports = {
         const formattedList = filteredList.map((group, index) =>
           `│${index + 1}. ${group.threadName}\n│𝗚𝗥𝗢𝗨𝗣 𝗜𝗗: \n│${group.threadID}`
         );
-        const message = `╭─────❁\n│𝗔𝗥𝗬𝗔𝗡 𝗟𝗜𝗦𝗧 𝗕𝗢𝗫 \n╰────────────❁\n\n╭────────────❁\n ${formattedList.map(line => `${line}`).join("\n")}\n╰────────────❁`;
+        const message = `╭────────────❁\n ${formattedList.map(line => `${line}`).join("\n")}\n╰────────────❁`;
         await api.sendMessage(message, event.threadID, event.messageID);
       }
     } catch (error) {

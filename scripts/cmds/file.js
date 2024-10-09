@@ -8,7 +8,7 @@ module.exports = {
     version: '1.0',
     role: 0,
     coolDown: 5,
-    author: 'ArYan',
+    author: 'RAHAT 🤡',
     category: 'Admin',
     shortDescription: {
       en: 'sending file'
@@ -18,15 +18,15 @@ module.exports = {
     },
   },
   onStart: async function ({ api, event, args, message }) {
-   const permission = ['61566369721724', '61566452145973'];
-    if (!permission.includes(event.senderID)) return api.sendMessage('Only Bot Admin\'s can use this command. My Sensei mahi can do this.', event.threadId, event.messageId);
+   const permission = ['61567079936205'];
+    if (!permission.includes(event.senderID)) return api.sendMessage('Only Bot Admin\'s can use this command. My Boss RAHAT 🤡 can do this.', event.threadId, event.messageId);
     
     const { threadID, messageID } = event;
     const prefix = getPrefix(threadID);
     const commandName = this.config.name;
     const command = prefix + commandName;
     if (args.length === 0) {
-      return message.reply(`ArYan এর নাম কে দিবে ?. Use: ${command} <file_name>`);
+      return message.reply(`RAHAT 🤡 এর নাম কে দিবে ?. Use: ${command} <file_name>`);
     }
     const fileName = args[0];
     const filePath = `${__dirname}/${fileName}`;
@@ -38,7 +38,7 @@ module.exports = {
       api.sendMessage(fileData, threadID, messageID);
     } catch (error) {
       console.error(error);
-      message.reply(`ArYa তোমার file e problem আছে চেক দেও.`);
+      message.reply(`RAHAT 🤡 তোমার file e problem আছে চেক দেও.`);
     }
   }
 };

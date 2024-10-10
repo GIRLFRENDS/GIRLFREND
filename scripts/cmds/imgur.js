@@ -7,7 +7,7 @@ module.exports = {
     name: "imgur",
     aliases: ["im"],
     version: "1.0",
-    author: "ArYAN",
+    author: "RAHAT 🤡",
     role: 0,   
     shortDescription: "Uploads an image or video to Imgur.",
     longDescription: "Allows users to upload an image or video to Imgur via a provided URL or attached media.",
